@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import add, {jian} from './add'
 import Button from './Button'
+import Input from './Input'
 
 // console.log(add(1,2))
 // console.log(jian(1,2))
@@ -66,46 +67,52 @@ class App extends Component {
     }
   }
 
-  handleClick(){
-    this.setState(
-      {
-        like: !this.state.like
-      }
-    )
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <Nav></Nav>
-        <Button></Button>
-        <button type="button" style={this.state.like?{color:"red"}:{color:"black"}}
-          onClick={()=>this.handleClick()}
-        >
-        {
-          this.state.like?"已赞":"喜欢"
-        }
-        </button>
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <h1>
-          Hello world
-        </h1> */}
+  // handleClick(){
+  //   this.setState(
+  //     {
+  //       like: !this.state.like
+  //     }
+  //   )
+  // }
+  render(){
+    return(
+      <div>
+        <Input></Input>
       </div>
     );
   }
+  // render() {
+  //   return (
+  //     <div className="App">
+  //       <Nav></Nav>
+  //       <Button></Button>
+  //       <button type="button" style={this.state.like?{color:"red"}:{color:"black"}}
+  //         onClick={()=>this.handleClick()}
+  //       >
+  //       {
+  //         this.state.like?"已赞":"喜欢"
+  //       }
+  //       </button>
+  //       {/* <header className="App-header">
+  //         <img src={logo} className="App-logo" alt="logo" />
+  //         <p>
+  //           Edit <code>src/App.js</code> and save to reload.
+  //         </p>
+  //         <a
+  //           className="App-link"
+  //           href="https://reactjs.org"
+  //           target="_blank"
+  //           rel="noopener noreferrer"
+  //         >
+  //           Learn React
+  //         </a>
+  //       </header>
+  //       <h1>
+  //         Hello world
+  //       </h1> */}
+  //     </div>
+  //   );
+  // }
 }
 
 export default App;

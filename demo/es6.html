@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var add = function(a,b){
+            return a+b
+        }    
+
+        // 箭头函数
+        var add2 = (a,b) => {
+            return a+b 
+        }
+
+        var p = a => {
+            return a*a
+        }
+
+        var p = a => a*a
+
+        var p = a => alert(a*a)
+
+        var obj = {
+            name: "1",
+            f : function(){
+                var me = this
+                window.setTimeout(function(){
+                    console.log(window.name)
+                    console.log(this.name)
+                    console.log(me.name)
+                },100)
+            },
+            fn : function(){
+                setTimeout(
+                    ()=>{
+                        console.log(this,'箭头函数')
+                    },100
+                )
+            }
+        }
+    </script>
+</body>
+</html>
