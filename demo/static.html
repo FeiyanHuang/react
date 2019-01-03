@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es5
+        var Demo = function () {
+            this.a = '1'
+        }
+
+        Demo.a = "1"
+        Demo.b = function () {
+            console.log('Demo.b')
+        }
+
+        //es6
+        class Demo2 {
+            static b () {
+                console.log('static b')
+            }
+        }
+
+        Demo2.a = '111'
+        // Demo2.b = function () {
+        //     console.log('Demo2.b')
+        // }
+    </script>
+</body>
+</html>

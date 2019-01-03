@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Test from './Test';
+import Demo from './Demo';
 
 class App extends Component {
   constructor(props){
@@ -12,7 +13,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        { this.state.isRenderTest ?  <Test></Test> : '不渲染'} 
+        { this.state.isRenderTest ?  <Demo></Demo> : '不渲染'}
+        {/* { this.state.isRenderTest ?  <Test></Test> : '不渲染'}  */}
         {/* <Test></Test> */}
         <p>App</p>
         <button type="button" onClick={()=>this.setState({})}>app setState更新</button>
