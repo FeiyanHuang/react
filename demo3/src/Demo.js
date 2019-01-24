@@ -10,11 +10,25 @@ export default class Demo extends Component{
         // 函数返回结果将会被添加到state添加到/更新state得内容
         // null state 不需要任何改变
         console.log('静态生命周期函数')
+        return {
+            like: true
+        }
+    }
+
+    getSnapshotBeforeUpdate(){
+        console.log('更新前获取快照')
         return null
     }
+
     render(){
+        console.log('render', this.state)
         return(
-            <div>Demo</div>
+            <div>
+                <p>Demo</p>
+                <button type="button" 
+                    onClick={()=>this.setState({})}
+                >setState</button>
+            </div>
         )
     }
     componentDidMount(){
